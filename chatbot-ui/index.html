@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartKitchen 🍳</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2d9b6a66a.js" crossorigin="anonymous"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3><i class="fa-solid fa-carrot" style="color: orange; font-size: 50px;"></i>SmartKitchen</h3>
+      <ul>
+        <li><i class="fas fa-search" style="color: rgb(252, 252, 252);"></i> Tìm kiếm</li>
+        <li><i class="fas fa-calendar-alt" style="color: blue;"></i> Kế hoạch</li>
+        <li><i class="fas fa-heart" style="color: rgb(255, 0, 0);"></i> Công thức</li>
+        <li><i class="fa-solid fa-bullseye" style="color: rgb(255, 0, 13);"></i> Mục tiêu</li>
+        <li><i class="fas fa-users" style="color: rgb(10, 10, 10);"></i> Cộng đồng</li>
+        <li><i class="fa-solid fa-fire" style="color: rgb(255, 111, 0);"></i> Tập luyện</li>
+        <li><i class="fa-solid fa-bookmark" style="color: rgb(237, 237, 240);"></i> Đã lưu</li>
+        <li id="assistant-btn"><i class="fas fa-robot" style="color: rgb(31, 219, 222);"></i> Trợ lý</li>
+        <li><i class="fa-solid fa-bars" style="color: rgb(12, 12, 12);"></i> Hồ sơ</li>
+        
+      </ul>
+    </aside>
+
+    <!-- Nội dung chính -->
+    <main class="main-content">
+      <div class="welcome">
+        <h1>Xin chào Lệ Quyền 👋</h1>
+        <p>Chào mừng trở lại! Hôm nay bạn muốn nấu món gì?</p>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm món ăn, nguyên liệu hoặc gợi ý...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="recipe-grid">
+        <div class="recipe-card">
+          <img src="image/phobo.jpg" alt="Phở bò">
+          <h3>Phở bò</h3>
+          <p>Món ăn truyền thống đậm đà hương vị Việt Nam.</p>
+          <button>Xem chi tiết</button>
+        </div>
+
+        <div class="recipe-card">
+          <img src="image/maxresdefault.jpg" alt="Thịt kho tàu">
+          <h3>Thịt kho tàu</h3>
+          <p>Thơm ngon béo ngậy, ăn cùng cơm trắng nóng hổi.</p>
+          <button>Xem chi tiết</button>
+        </div>
+
+        <div class="recipe-card">
+          <img src="image/OIP.jpg" alt="Bánh mì thịt">
+          <h3>Bánh mì thịt</h3>
+          <p>Bánh mì giòn, thịt nguội và rau củ tươi mát.</p>
+          <button>Xem chi tiết</button>
+        </div>
+
+        <div class="recipe-card">
+          <img src="image/OIP (1).jpg" alt="Thịt xào sả ớt">
+          <h3>Thịt xào sả ớt</h3>
+          <p>Món ăn cay nồng, đậm đà hương vị miền Trung.</p>
+          <button>Xem chi tiết</button>
+        </div>
+         <div class="recipe-card">
+          <img src="image/OIP (2).jpg" alt="Phở bò">
+          <h3>Phở bò</h3>
+          <p>Món ăn truyền thống đậm đà hương vị Việt Nam.</p>
+          <button>Xem chi tiết</button>
+        </div>
+         <div class="recipe-card">
+          <img src="image/OIP (3).jpg" alt="Phở bò">
+          <h3>Phở bò</h3>
+          <p>Món ăn truyền thống đậm đà hương vị Việt Nam.</p>
+          <button>Xem chi tiết</button>
+        </div>
+      </div>
+    </main>
+     
+    <!-- Chatbot -->
+    <div id="chatbot" class="hidden">
+      <div class="chat-header">
+        💗 Trợ lý nấu ăn
+        <span id="closeChat">✖</span>
+      </div>
+      <div class="chat-box" id="chatBox">
+        <div class="bot message">Xin chào! Mình là trợ lý SmartKitchen 💬<br>Bạn muốn nấu món gì hôm nay?</div>
+      </div>
+      <div class="input-area">
+        <input type="text" id="userInput" placeholder="Nhập tin nhắn...">
+        <button id="sendBtn">Gửi</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

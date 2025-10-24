@@ -1,0 +1,46 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - suggest_recipe
+  - ask_ingredients
+  - ask_time
+  - list_recipes
+  - ask_steps
+  - ask_healthy_recipes
+  - ask_diabetes_recipes
+  - ask_meal_time_recipes
+  - cooking_tips
+  - food_storage
+  - substitute_ingredient
+  - thanks
+  - nlu_fallback
+
+entities:
+  - ingredient
+  - dish
+  - time_limit
+
+responses:
+  utter_greet:
+    - text: "Xin chào! Mình là trợ lý nấu ăn 🍳. Bạn muốn nấu món gì hôm nay?"
+  utter_goodbye:
+    - text: "Chúc bạn nấu ăn ngon miệng nhé 👋"
+  utter_fallback:
+    - text: "Mình chưa hiểu rõ lắm, bạn nói cụ thể món hoặc nguyên liệu nha."
+  utter_thanks:
+    - text: "Cảm ơn bạn, chúc bạn nấu món ngon thật thành công nhé ❤️"
+
+actions:
+  - action_suggest_recipe
+  - action_ask_ingredients
+  - action_ask_time
+  - action_list_recipes
+  - action_ask_steps
+  - action_healthy_recipes
+  - action_diabetes_recipes
+  - action_mealtime_recipes
+  - action_cooking_tips
+  - action_food_storage
+  - action_substitute_ingredient

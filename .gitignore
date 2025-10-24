@@ -1,0 +1,13 @@
+# Bỏ môi trường ảo và cache
+venvRasa/
+__pycache__/
+.rasa/
+*.db
+*.log
+
+# Bỏ file thực thi và model tạm
+ngrok.exe
+*.tar.gz
+
+# Bỏ token và file nhạy cảm
+credentials.yml

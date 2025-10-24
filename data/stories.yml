@@ -1,0 +1,58 @@
+version: "3.1"
+stories:
+- story: chào và gợi ý món
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: suggest_recipe
+  - action: action_suggest_recipe
+
+- story: hỏi nguyên liệu
+  steps:
+  - intent: ask_ingredients
+  - action: action_ask_ingredients
+
+- story: hỏi thời gian nấu
+  steps:
+  - intent: ask_time
+  - action: action_ask_time
+
+- story: liệt kê món theo tiêu chí
+  steps:
+  - intent: list_recipes
+  - action: action_list_recipes
+
+- story: hỏi cách nấu món
+  steps:
+  - intent: ask_steps
+  - action: action_ask_steps
+
+- story: hỏi món giảm cân
+  steps:
+  - intent: ask_healthy_recipes
+  - action: action_healthy_recipes
+
+- story: hỏi món cho người tiểu đường
+  steps:
+  - intent: ask_diabetes_recipes
+  - action: action_diabetes_recipes
+
+- story: hỏi món theo bữa ăn
+  steps:
+  - intent: ask_meal_time_recipes
+  - action: action_mealtime_recipes
+
+- story: hỏi mẹo nấu ăn
+  steps:
+  - intent: cooking_tips
+  - action: action_cooking_tips
+
+- story: hỏi bảo quản
+  steps:
+  - intent: food_storage
+  - action: action_food_storage
+
+- story: thay thế nguyên liệu
+  steps:
+  - intent: substitute_ingredient
+  - action: action_substitute_ingredient

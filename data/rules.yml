@@ -1,0 +1,21 @@
+version: "3.1"
+rules:
+- rule: chào thì chào lại
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: tạm biệt thì tạm biệt lại
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: cảm ơn thì phản hồi
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallback

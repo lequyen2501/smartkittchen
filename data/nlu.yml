@@ -1,0 +1,271 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - xin chào
+    - chào bạn
+    - hello
+    - hi
+    - chào buổi sáng
+    - chào buổi tối
+    - có ai ở đây không
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - hẹn gặp lại
+    - bye bye
+    - cảm ơn nhé
+    - mình đi đây
+- intent: suggest_recipe
+  examples: |
+    - mình muốn ăn phở bò
+    - hôm nay có gì ngon từ thịt gà không
+    - gợi ý món canh rau củ thanh đạm
+    - ăn gì với cơm gạo lứt thì hợp
+    - có món nào nấu nhanh trong 15 phút không
+    - gợi ý món chiên ngon
+    - món nào hợp cho bữa sáng
+    - có món bún nào dễ làm không
+    - hôm nay lạnh quá, ăn gì ấm bụng
+    - món nào ngon với trứng
+    - có món gì từ đậu phụ không
+    - món nào ăn cùng nước mắm ngon
+    - mình muốn ăn món nước
+    - gợi ý món canh chua dễ nấu
+    - có món cơm nào đơn giản không
+    - mình muốn ăn chay, có món nào gợi ý không
+    - món nào phù hợp bữa trưa
+    - hôm nay không muốn ăn dầu mỡ, nấu gì đây
+    - có món nào dùng cá mà ít tanh không
+    - món nào ngon mà ít nguyên liệu
+
+- intent: ask_ingredients
+  examples: |
+    - nguyên liệu của [phở bò](dish) là gì
+    - món [bún riêu](dish) cần chuẩn bị gì
+    - cần gì để nấu [bún bò huế](dish)
+    - [cơm chiên dương châu](dish) có nguyên liệu nào
+    - [canh rau củ](dish) gồm những gì
+    - [cá kho tộ](dish) dùng loại cá nào
+    - [gỏi cuốn](dish) cần nguyên liệu gì
+    - [cháo yến mạch](dish) nấu với gì
+    - [súp bí đỏ](dish) gồm những nguyên liệu nào
+    - [cơm gà](dish) cần những gì
+    - [thịt kho tàu](dish) gồm những gì
+    - [trứng chiên rau củ](dish) cần gì
+    - [bánh xèo](dish) làm từ nguyên liệu gì
+    - [gà kho gừng](dish) cần gì
+    - [bún xào](dish) có nguyên liệu nào
+    - [canh mướp nấu tôm](dish) dùng nguyên liệu gì
+    - [bánh cuốn](dish) có gì trong đó
+    - [bò lúc lắc](dish) cần gì để nấu
+    - [bánh canh cua](dish) gồm nguyên liệu nào
+    - [bún chả](dish) gồm thịt và rau gì
+    - [cơm rang trứng](dish) cần chuẩn bị gì
+    - [cà ri gà](dish) dùng nguyên liệu nào
+    - [bún thịt nướng](dish) có gì
+    - [chả cá Lã Vọng](dish) gồm nguyên liệu nào
+    - [canh chua cá](dish) cần những gì
+    - [hủ tiếu Nam Vang](dish) gồm những gì
+
+
+- intent: ask_time
+  examples: |
+    - nấu [phở bò](dish) mất bao lâu
+    - món [bún bò huế](dish) tốn thời gian không
+    - làm [cơm chiên dương châu](dish) bao nhiêu phút
+    - [cháo yến mạch](dish) nấu trong mấy phút
+    - [canh rau củ](dish) nấu mất bao lâu
+    - [cá kho tộ](dish) nấu mấy phút thì chín
+    - [bún riêu](dish) nấu nhanh không
+    - [bánh xèo](dish) làm mất bao lâu
+    - [cơm gà](dish) nấu trong bao lâu
+    - [gỏi cuốn](dish) làm tầm mấy phút
+    - [bò lúc lắc](dish) nấu nhanh không
+    - [canh bí đỏ](dish) nấu mấy phút
+    - [thịt kho tàu](dish) mất bao lâu
+    - [cà ri gà](dish) nấu tốn nhiều thời gian không
+    - [canh mướp tôm](dish) nấu nhanh không
+    - [bún chả](dish) làm khoảng bao lâu
+    - [hủ tiếu Nam Vang](dish) nấu trong bao nhiêu phút
+    - [bánh canh cua](dish) tốn bao lâu
+    - [bún xào](dish) làm nhanh không
+    - [chả cá Lã Vọng](dish) chế biến mất bao nhiêu phút
+
+
+- intent: list_recipes
+  examples: |
+    - liệt kê món từ [trứng](ingredient)
+    - có món nào dùng [cá](ingredient) không
+    - cho mình danh sách món từ [thịt gà](ingredient)
+    - có món nào nấu dưới [15 phút](time_limit) không
+    - món nào dễ nấu trong [20 phút](time_limit)
+    - có món nào từ [đậu phụ](ingredient) không
+    - gợi ý vài món ăn với [rau củ](ingredient)
+    - món nào có [thịt heo](ingredient) ngon
+    - có món nào phù hợp khi có [cơm nguội](ingredient) không
+    - món nào dùng [tôm](ingredient) mà nhanh
+    - có món [canh](ingredient) nào ngon không
+    - liệt kê món [chiên](ingredient) phổ biến
+    - món nào ăn kèm [nước mắm](ingredient)
+    - có món nào từ [bò](ingredient) không
+    - món nào hợp ăn với [cơm gạo lứt](ingredient)
+    - có món [xào](ingredient) nào đơn giản không
+    - liệt kê món phù hợp cho [bữa sáng](ingredient)
+    - món nào nhẹ bụng, dễ tiêu
+    - có món ăn nào dành cho [người ăn chay](ingredient) không
+    - gợi ý vài món [chay](ingredient) ngon miệng
+    - có món nào chỉ cần [3 nguyên liệu](ingredient) không
+    - món nào vừa [rẻ](ingredient) vừa dễ nấu
+    - có món nào dùng [rau muống](ingredient) không
+    - có món nào dùng [bầu](ingredient) hoặc [mướp](ingredient) không
+    - món nào có thể nấu với [nấm](ingredient)
+    - gợi ý vài món dùng [đậu hũ](ingredient)
+    - món nào làm từ [cà chua](ingredient)
+    - liệt kê món ăn trong [30 phút](time_limit)
+    - có món nào ăn [buổi tối](ingredient) mà nhẹ bụng không
+    - món nào thích hợp cho [trẻ nhỏ](ingredient)
+    - gợi ý món ăn phù hợp cho [ngày chay](ingredient)
+    - có món nào ăn với [bún](ingredient) không
+    - liệt kê món từ [bánh tráng](ingredient)
+    - có món [súp](ingredient) nào dễ nấu không
+    - món nào dùng [rau dền](ingredient)
+    - có món nào từ [bí đỏ](ingredient) không
+    - món nào từ [gạo lứt](ingredient)
+    - món nào có [thịt bò](ingredient)
+    - món nào dùng [trứng vịt](ingredient)
+    - có món nào dùng [hải sản](ingredient) không
+    - món nào có thể làm trong [10 phút](time_limit)
+    - món nào ăn vào [mùa hè](ingredient) mát mẻ
+    - có món nào dùng [thịt ba rọi](ingredient) không
+    - món nào ít dầu mỡ, tốt cho sức khỏe
+    - có món ăn nào hợp khi chỉ có [rau và trứng](ingredient) không
+
+
+- intent: ask_steps
+  examples: |
+    - cách làm [phở bò](dish)
+    - hướng dẫn nấu [bún bò huế](dish)
+    - chỉ mình cách làm [bún riêu](dish)
+    - nấu [cơm chiên dương châu](dish) như thế nào
+    - hướng dẫn nấu [canh chua cá](dish)
+    - [cá kho tộ](dish) nấu ra sao
+    - làm [bánh xèo](dish) như thế nào
+    - các bước nấu [gỏi cuốn](dish)
+    - nấu [cháo yến mạch](dish) thế nào
+    - chỉ mình cách chế biến [súp bí đỏ](dish)
+    - hướng dẫn làm [thịt kho tàu](dish)
+    - [bún xào](dish) làm sao cho ngon
+    - [cà ri gà](dish) nấu thế nào
+    - [bánh cuốn](dish) làm sao
+    - [bún thịt nướng](dish) nướng sao cho thơm
+    - [bánh canh cua](dish) nấu như thế nào
+    - chỉ cách làm [chả cá Lã Vọng](dish)
+    - [cơm rang trứng](dish) làm thế nào
+    - hướng dẫn làm [canh mướp nấu tôm](dish)
+    - cách làm [bò lúc lắc](dish)
+
+
+- intent: ask_healthy_recipes
+  examples: |
+    - gợi ý món ăn giúp giảm cân
+    - món nào ít calo
+    - mình muốn ăn món tốt cho sức khỏe
+    - món nào phù hợp cho người tập gym
+    - món nào nhẹ bụng
+    - có món nào thanh đạm không
+    - gợi ý món ăn ít dầu mỡ
+    - món nào nhiều rau củ
+    - có món nào ăn mà không sợ tăng cân không
+    - gợi ý món ăn giàu protein
+    - món nào ăn buổi tối mà không béo
+    - món nào tốt cho tim mạch
+    - có món nào ít cholesterol không
+    - gợi ý món chay tốt cho sức khỏe
+    - món nào dùng ít muối mà vẫn ngon
+
+
+- intent: ask_diabetes_recipes
+  examples: |
+    - người bị tiểu đường nên ăn món gì
+    - có món nào ít đường không
+    - món nào tốt cho người bị tiểu đường
+    - gợi ý món ăn phù hợp cho người tiểu đường
+    - món nào dùng được cho người ăn kiêng
+    - gợi ý món ít tinh bột
+    - món nào không dùng đường
+    - có món cháo nào phù hợp cho người tiểu đường không
+    - món nào dùng yến mạch tốt cho đường huyết
+    - có món nào vừa ngon vừa tốt cho người tiểu đường không
+
+
+- intent: ask_meal_time_recipes
+  examples: |
+    - bữa sáng nên ăn gì
+    - buổi trưa ăn món gì nhẹ
+    - gợi ý món ăn tối thanh đạm
+    - ăn gì sau khi tập thể dục
+    - có món nào cho bữa sáng ít dầu mỡ không
+    - buổi tối nên ăn món chay hay mặn
+    - món nào ăn trưa nhanh mà vẫn đủ chất
+    - gợi ý món ăn sáng cho người bận rộn
+    - buổi tối ăn món gì dễ tiêu
+    - ăn gì khi đi làm về trễ
+
+
+- intent: cooking_tips
+  examples: |
+    - mẹo luộc rau xanh hơn
+    - bí quyết kho cá ngon
+    - làm sao chiên trứng không bị cháy
+    - cách nêm nếm vừa ăn
+    - mẹo nấu canh ngọt tự nhiên
+    - làm sao chiên không dính chảo
+    - bí quyết ướp thịt ngon
+    - mẹo giữ rau tươi lâu khi nấu
+    - làm sao cơm không bị khô
+    - mẹo nấu nhanh mà vẫn ngon
+
+
+- intent: food_storage
+  examples: |
+    - bảo quản rau củ bao lâu
+    - trứng để tủ lạnh được mấy ngày
+    - cá để đông lạnh được không
+    - đồ ăn thừa để qua đêm được không
+    - cách bảo quản thực phẩm trong tủ lạnh
+    - nên để thịt sống bao lâu
+    - rau để trong ngăn mát được mấy ngày
+    - cách giữ trái cây tươi lâu
+    - hâm lại đồ ăn thừa như thế nào
+    - thức ăn nấu sẵn bảo quản ra sao
+
+
+- intent: substitute_ingredient
+  examples: |
+    - không có trứng thì dùng gì thay thế
+    - có thể thay đường bằng mật ong không
+    - không có nước mắm thì dùng gì được
+    - nếu hết dầu ăn thì dùng gì thay
+    - có thể thay thịt bằng đậu hũ được không
+    - không có sữa tươi thì dùng sữa chua được không
+    - hết muối rồi, thay bằng gì được
+    - có thể thay bột nêm bằng nước tương không
+    - không có hành thì thay bằng gì
+    - nếu hết tiêu thì có cần dùng gia vị khác không
+
+- intent: thanks
+  examples: |
+    - cảm ơn nha
+    - cảm ơn nhiều
+    - bot giỏi quá
+    - món này ngon ghê
+    - cảm ơn vì đã gợi ý
+    - hay quá, để mình thử
+    - tuyệt vời, mình thích món đó
+    - cảm ơn vì mẹo hay nha
+    - bot nấu ăn giỏi ghê
+    - cảm ơn vì giúp mình chọn món
+
